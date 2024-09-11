@@ -16,22 +16,29 @@ import java.util.List;
 public class SearchController {
     @Autowired
     SearchService service;
-
+    @PostMapping("/all")
+    public ResponseDTO getResult(){
+        ResponseDTO res = new ResponseDTO();
+        res.setMessage(service.getAll());
+        res.setCode(200);
+        return res;
+    }
     @PostMapping("/results")
     public ResponseDTO getResult(@RequestBody RequestDTO requestDTO){
         ResponseDTO res = new ResponseDTO();
 
-        if(requestDTO.getDistance() == -1){
-            res.setMessage(service.getAll());
-        } else {
-            List<SearchEntity> msg = service.getByCondition(
-                        requestDTO.getDistance(),
-                        requestDTO.getApplication(),
-                        requestDTO.getTruckStatus(),
-                        requestDTO.getFacilityType()
-            );
-            res.setMessage(msg);
-        }
+        Long distance = requestDTO.getDistance() == null ? -1:requestDTO.getDistance();
+        String applicant = requestDTO.getApplicant() == null ? "":requestDTO.getApplicant();
+        String truckStatus = requestDTO.getTruckStatus() == null ? "": requestDTO.getTruckStatus();
+        String facilityType = requestDTO.getFacilityType() == null ? "": requestDTO.getFacilityType();
+
+        List<SearchEntity> msg = service.getByCondition(
+                distance,
+                applicant,
+                truckStatus,
+                facilityType
+        );
+        res.setMessage(msg);
         res.setCode(200);
         return res;
     }

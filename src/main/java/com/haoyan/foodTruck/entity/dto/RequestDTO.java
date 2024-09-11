@@ -1,7 +1,7 @@
 package com.haoyan.foodTruck.entity.dto;
 
 public class RequestDTO {
-    private long distance;
+    private Long distance;
 
     private String applicant;
 
@@ -9,7 +9,7 @@ public class RequestDTO {
 
     private String facilityType;
 
-    public long getDistance() {
+    public Long getDistance() {
         return distance;
     }
 
@@ -17,11 +17,11 @@ public class RequestDTO {
         this.distance = distance;
     }
 
-    public String getApplication() {
+    public String getApplicant() {
         return applicant;
     }
 
-    public void setApplication(String applicant) {
+    public void setApplicant(String applicant) {
         this.applicant = applicant;
     }
 

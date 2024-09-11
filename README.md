@@ -22,12 +22,10 @@ FoodTruckApplication
 - <b>applicant: </b>food truck name. <br>
 - <b>truckStatus: </b>food truck status. <br>
 - <b>facilityType: </b>facility Type for food truck. <br>
-
 #### Return structure example:
-
 ```json
 {
-  "code": [Integer code for return type],
+  "code": 200,
   "message": [
     {
       "applicant": "applicant name",
@@ -41,7 +39,9 @@ FoodTruckApplication
   ], ...
 }
 ```
-
+### Get All Result: /search/all/
+##### Type: post.
+#### Return structure example: just like previous one.
 
 ### Test Connection: /search/test/
 ##### Type: get.
