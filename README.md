@@ -1,4 +1,5 @@
-# foodTruck
+# FoodTruck
+
 ## Description:
 This is a backend service for finding truck list in San Fransico by using distance, name, status, and facilityType.
 
@@ -35,13 +36,14 @@ FoodTruckApplication
       "facilityType": "facility type",
       "dayshours": "working hours",
       "latitude":  "truck latitude",
-      "longitude": "truck longitude"}
-  ], ...
+      "longitude": "truck longitude"
+    },{}
+  ]
 }
 ```
 ### Get All Result: /search/all/
 ##### Type: post.
-#### Return structure example: just like previous one.
+#### Return structure example: just like previous one.::
 
 ### Test Connection: /search/test/
 ##### Type: get.
