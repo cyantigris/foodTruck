@@ -3,7 +3,7 @@ package com.haoyan.foodTruck.entity.dto;
 public class RequestDTO {
     private long distance;
 
-    private String application;
+    private String applicant;
 
     private String truckStatus;
 
@@ -18,11 +18,11 @@ public class RequestDTO {
     }
 
     public String getApplication() {
-        return application;
+        return applicant;
     }
 
-    public void setApplication(String application) {
-        this.application = application;
+    public void setApplication(String applicant) {
+        this.applicant = applicant;
     }
 
     public String getTruckStatus() {
