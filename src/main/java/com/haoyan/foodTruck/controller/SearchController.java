@@ -17,7 +17,7 @@ public class SearchController {
     @Autowired
     SearchService service;
 
-    @PostMapping("/getResult")
+    @PostMapping("/results")
     public ResponseDTO getResult(@RequestBody RequestDTO requestDTO){
         ResponseDTO res = new ResponseDTO();
 

@@ -14,13 +14,14 @@ FoodTruckApplication
     |- impl -> service implementations <br>
 
 ## APIs:
-### Get Search Result: /search/getResult/
+### Get Search Result: /search/results/
 ##### Type: post.
 #### Parameters: 
-<b>distance(km): </b>Chosen distance from center( Estee Lauder store location in Macy's department store in SF). <br>
-<b>applicant: </b>food truck name. <br>
-<b>truckStatus: </b>food truck status. <br>
-<b>facilityType: </b>facility Type for food truck. <br>
+- <b>distance(km): </b>Chosen distance from center( Estee Lauder store location in Macy's department store in SF).<br>
+  <b>Value "-1" means to get all.<b><br>
+- <b>applicant: </b>food truck name. <br>
+- <b>truckStatus: </b>food truck status. <br>
+- <b>facilityType: </b>facility Type for food truck. <br>
 
 #### Return structure example:
 
